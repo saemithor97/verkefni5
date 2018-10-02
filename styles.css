@@ -1,0 +1,148 @@
+* 
+{
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after 
+{
+  box-sizing: inherit;
+}
+
+html 
+{
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+main 
+{
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px;
+}
+main h2
+{
+  font-size: 1.375em;
+  line-height: 1.375em;
+}
+
+main p
+{
+  line-height: 1.375em;
+  font-size: 1em;
+}
+
+img   /* Myndirnar */
+{
+  width: 9.375em;
+}
+
+.cards  /* Dálkarnir,staðsetning */
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #eee;
+}
+
+.card   /* Dálkar 2,3,4 og 6 útlit */
+{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  border: 2px solid #aaa;
+  background: #fff;
+  border-radius: 5px;
+  max-width: 29.375em; /* 470px/16px = 29.375em */
+  max-height: 18.750em; /* 300px/16px = 18.750em */
+  margin-bottom: 0.625em;  /* 10px/16px = 0.625em */
+  padding: 0.625em;
+  min-height: 0;
+}
+
+.card_p  /* Dálkar 1 og 5 útlit */
+{
+  display: flex;
+  flex-flow: wrap;
+  border: 2px solid #aaa;
+  background: #fff;
+  border-radius: 5px;
+  max-width: 29.375em; /* 470px/16px = 29.375em */
+  max-height: 18.750em; /* 300px/16px = 18.750em */
+  margin-bottom: 0.625em;  /* 10px/16px = 0.625em */
+  padding: 0.625em;
+}
+
+.card_text_p  /* Þetta er fyrir textan í dálka 1 og 5. Þvi núna er textinn á sama stað eins og sýnidæmið */
+{
+  padding-bottom: 5em;
+}
+
+.card_h2 
+{
+  overflow: auto;
+  overflow-wrap: break-word; /* Ef textinn er lengri , þá fer hann í nýja línu */
+  font-size: 1.375em;
+}
+
+.card_two_columns
+{
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  max-height: 83%;
+}
+
+.card_three_columns
+{
+  display: flex;
+  max-width: 100%;
+  max-height: 65%;
+}
+
+.card_text  /* P - textinn */
+{
+  overflow-wrap: break-word;  /* Ef textinn er lengri , þá fer hann í nýja línu */
+  overflow: auto;
+  max-height: 100%;
+}
+
+.card_text_picture /* Myndin í sitthvoru dálknum ( Í sitthvorum dálk) */ 
+{
+  padding-left: 0.625em;
+}
+
+.card_img_scale
+{
+  max-width: 150px;
+  height: auto;
+}
+
+.card_list
+{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  list-style: none;
+}
+
+.card_list > *
+{
+  margin-right: 0.3125em;
+  font-weight: bold;
+}
+
+@media screen and (max-width:500px){
+  .cards{
+    float: bottom;
+  }
+  .card{
+    float: left;
+  }
+  html{
+    float: left;
+  }
+}
